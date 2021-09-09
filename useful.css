@@ -1,0 +1,13 @@
+body {
+      #background-image: url("doge_gif.webp");
+    }
+    .gray {
+      color: rgb(200, 200, 200);
+    }
+    .red {
+      color: rgb(200, 0, 0);
+    }
+    .highlight {
+      color: rgb(250, 30, 30);
+      background-color: rgb(100, 250, 100);
+    }
