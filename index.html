@@ -15,10 +15,32 @@ p {color:white; font-size:1.2vw}
 .red {
         color: rgb(200, 0, 0);
   }
- .tab {
+.tab {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.rotate {
+  animation: rotation 32s infinite linear;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 /* Style the buttons inside the tab */
@@ -58,7 +80,6 @@ p {color:white; font-size:1.2vw}
 </head>
 <body style="background:#23272A" onload="openSection(event, 'sus email')">
   <p class="gray" onclick="alert('Don\'t worry about it')"> Site veiw coutner: -2 </p>
-
 <div style="height:30px;width:95%;margin:auto;background-color:#23272A;font-size:30px;color:white"></div>
 <div class="tab" style="width:99.5%;margin:auto;position:center">
   <button class="tablinks" onclick="openSection(event, 'sus email')">Suspicious Emails</button>
@@ -92,17 +113,48 @@ p {color:white; font-size:1.2vw}
 </div>
 
 <div id="acc settings" class="tabcontent">
-  <h1>How you can help</h1>
-  <p>The Association of Petroleum Distributers is a corporate focused group. The issues we advocate for are very important to us, and the biggest benefit we can get from the public is ignorance. If you like what we do, don't tell anyone about it. Just leave this site and forget that it existed. If you really like what we do, we do accept donations of any ammount over 10,000USD.</p>
-  <input style="color:black;font-size:1.2vw" type="button" onclick="location.href='https://donate.wikimedia.org/w/index.php?title=Special:LandingPage&country=US&uselang=en&utm_medium=spontaneous&utm_source=fr-redir&utm_campaign=spontaneous';" value="Donate" />
-  <p>We have no idea why you would do that, but free money is free so we wont ask questions.</p>
+  <p>Account settings can be used to further enhance privicy.</p>
+  <p>Rejecting use of an advertising ID makes tracking you around the web more difficult.</p>
+  <p>Also see if you can use social media settings to hide:</p>
+  <ul>
+    <li>Your name
+    <li>Your birthday
+    <li>Your location</li>
+  <p>You can protect your friends privacy by not allowing social media platforms access to your contacts.</p>
 </div>
 
 <div id="pass" class="tabcontent">
-  <h1>Taylor Andrews</h1>
-  <p>Homie bathes in crude oil, so you know we hit him up...</p>
+  <p>The cryptographic strength of a password is useless if you don't keep it a secret. A good password is only as strong as you are.</p>
+  <h1>When making a password</h1>
+  <p>Use:</p>
+  <ul>
+    <li>Capitals</li>
+    <li>Numbers</li>
+    <li>Special characters</li>
+    <li>Multiple words</li>
+  </ul>
+  <p>Do not use:</p>
+  <ul>
+    <li>Personal information like:
+      <ul style="list-style-type: circle;">
+        <li>Phone numbers</li>
+        <li>Pet names</li>
+        <li>Birthdays</li>
+        <li>addresses</li>
+      </ul>
+    </li>
+    <li>Easy to guess words like:
+      <ul style="list-style-type: circle;">
+      <li>Password</li>
+      <li>Hello</li>
+      <li>admin</li>
+      <li>letmein</li>
+    </ul>
+    </li>
+  </ul>
 </div>
-
+<p></p>
+<img src="file:///Users/304530/Downloads/cyber%20lifecycle.png" class="rotate">
 <script>
 function openSection(evt, secName) {
   var i, tabcontent, tablinks;
